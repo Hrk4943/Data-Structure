@@ -4,4 +4,5 @@ let pos=4
 for(let i=pos-1;i<n-1;i++){
     a[i]=a[i+1]
 }
+
 console.log(a)
