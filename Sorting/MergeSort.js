@@ -3,23 +3,19 @@ function mergeSort(array) {
     if (array.length <= 1) {
         return array;
     }
-
     // Split the array into two halves
     const middle = Math.floor(array.length / 2);
     const leftHalf = array.slice(0, middle);
     const rightHalf = array.slice(middle);
-
     // Recursively sort the two halves
     const sortedLeft = mergeSort(leftHalf);
     const sortedRight = mergeSort(rightHalf);
-
     // Merge the sorted halves
     return merge(sortedLeft, sortedRight);
 }
 
 function merge(left, right) {
     const result = [];
-
     // Compare the elements from the left and right arrays
     while (left.length && right.length) {
         if (left[0] <= right[0]) {

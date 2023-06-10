@@ -12,7 +12,7 @@ function quickSort(arr){
             right.push(arr[i])
         }
     }
-    return[...quickSort(left),pivot,...quickSort(right)]
+    return quickSort(left).concat(pivot, quickSort(right))
 }
 
 const a=[243, 45, 23, 356, 3, 5346, 35, 5];

@@ -69,7 +69,7 @@ queue.enqueue(60)
 queue.print()
 console.log("top-- ",queue.top())
 console.log("dequeue---",queue.dequeue())
-console.log("dequeue middle ---", queue.deleteMiddleValue());
+console.log("dequeue middle ---", queue.deleteMiddleValue( ));
 console.log("delete---", queue.deleteValue(30));
 queue.replace(50,100)
 console.log("position--",queue.find(100))

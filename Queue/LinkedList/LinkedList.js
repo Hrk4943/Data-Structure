@@ -4,7 +4,6 @@ class Node{
         this.next=null
     }
 }
-
 class LinkedList{
     constructor(){
         this.head=null
@@ -18,18 +17,6 @@ class LinkedList{
     getSize(){
         return this.size
     }
-
-    // prepend(value){
-    //     const node =new Node(value)
-    //     if(this.isEmpty()){
-    //         this.head=node
-    //         this.tail=node
-    //     } else {
-    //         node.next=this.head
-    //         this.head=node
-    //     }
-    //     this.size++
-    // }
 
     append(value){
         const node=new Node(value)
