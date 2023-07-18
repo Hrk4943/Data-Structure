@@ -23,14 +23,14 @@ class Graph{
      
     hasEdges(vertex1,vertex2){
         return(
-            this.adjacencyList[vertex1].has(vertex2) &&
-            this.adjacencyList[vertex2].has(vertex1)
+            this.adjacencyList[vertex1].includes(vertex2) &&
+            this.adjacencyList[vertex2].includes(vertex1)
         )
     }
 
     removeEdge(vertex1,vertex2){
-        this.adjacencyList[vertex1].delete(vertex2) 
-        this.adjacencyList[vertex2].delete(vertex1)
+        this.adjacencyList[vertex1]=this.adjacencyList[vertex1].filter((v)=>v!==vertex2)
+        this.adjacencyList[vertex2]=this.adjacencyList[vertex2].filter((v)=>v!==vertex1)
     }
 
     removeVertex(vertex){
@@ -94,9 +94,9 @@ graph.addEdges("B","C ")
 graph.display()
 // console.log("DFS")
 // graph.dfs("B")
-console.log("BFS")
-graph.bfs("B")
+// console.log("BFS")
+// graph.bfs("B")
 // console.log(graph.hasEdges("A","B"))
-// graph.removeVertex("B")
-// graph.display()
+graph.removeVertex("B")
+graph.display()
 

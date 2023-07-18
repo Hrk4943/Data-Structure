@@ -83,10 +83,10 @@ class BinarySearchTree {
         while (queue.length) {
             let currentValue = queue.shift()
             console.log(currentValue.value)
-            if (currentValue.left) {
+            if(currentValue.left) {
                 queue.push(currentValue.left)
             }
-            if (currentValue.right) {
+            if(currentValue.right) {
                 queue.push(currentValue.right)
             }
         }

@@ -3,6 +3,13 @@ class MaxHeap {
       this.heap = [];
     }
   
+    buildHeap() {
+      const heapSize = Math.floor(this.heap.length / 2);
+      for (let i = heapSize - 1; i >= 0; i--) {
+        this.heapifyDown(i);
+      }
+    }
+
     insert(value) {
       this.heap.push(value);
       this.heapifyUp(this.heap.length - 1);
@@ -72,12 +79,7 @@ class MaxHeap {
       console.log(this.heap);
     }
   
-    buildHeap() {
-      const heapSize = Math.floor(this.heap.length / 2);
-      for (let i = heapSize - 1; i >= 0; i--) {
-        this.heapifyDown(i);
-      }
-    }
+
   }
   
   let maxHeap = new MaxHeap();
